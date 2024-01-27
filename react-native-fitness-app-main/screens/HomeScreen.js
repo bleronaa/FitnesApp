@@ -10,25 +10,18 @@ const HomeScreen = () => {
   const { calories, minutes, workout } = useContext(FitnessItems);
   const navigation = useNavigation();
 
-  const handleGoBack = () => {
-    navigation.goBack();
-  };
-
   const handleNotificationToggle = () => {
     setShowIcon(!showIcon);
-    // Add logic for turning notifications on/off
+    
+  };
+  const handleSettingsToggle = () => {
+    navigation.navigate('UserSettings');
   };
 
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 20 }}>
       <View style={{ backgroundColor: "#000000d7", paddingTop: 30, paddingHorizontal: 20, height: 160, width: "100%" }}>
-        <Ionicons
-          onPress={handleGoBack}
-          style={{ position: 'absolute', top: 30, left: 20, backgroundColor: "#2ecc71", borderRadius: 8, padding: 3 }}
-          name="arrow-back-outline"
-          size={24}
-          color="black"
-        />
+        
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 50 }}>
           <Text style={{ color: "white", fontWeight: "bold", fontSize: 18, top: 20 }}>SIX PACK IN 30 DAYS</Text>
           <View style={styles.buttonContainer}>
@@ -41,16 +34,15 @@ const HomeScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
-
+    
         {/* Notification Icon */}
-        <TouchableOpacity onPress={handleNotificationToggle} style={styles.notificationIcon}>
+        <TouchableOpacity onPress={handleSettingsToggle} style={styles.notificationIcon}>
           <Ionicons
-            name={showIcon ? 'notifications' : 'notifications-off'}
+            name={'settings'}
             size={20}
             color="white"
           />
         </TouchableOpacity>
-
         {/* Cards Row  */}
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between",marginTop:-38 }}>
           {/* First Card  */}
@@ -97,7 +89,7 @@ const styles = StyleSheet.create({
   notificationIcon: {
     position: 'absolute',
     top: 10,
-    right: 20,
+    left: 20,
   },
   buttonContainer: {
     display:'flex',

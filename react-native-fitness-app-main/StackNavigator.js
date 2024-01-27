@@ -9,6 +9,7 @@ import RestScreen from './screens/RestScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import DailyActivity from './screens/DailyActivity';
 import NutritionGuideScreen from './screens/NutritionGuide';
+import UserSettings from './screens/UserSettings';
 
 
 
@@ -24,6 +25,7 @@ const StackNavigator = () => {
         <Stack.Screen options={{headerShown: false}} name="Nutrition" component={NutritionGuideScreen} />
         <Stack.Screen options={{headerShown: false}} name="Workout" component={WorkoutScreen} />
         <Stack.Screen options={{ headerShown: false }} name="Fit" component={FitScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="UserSettings" component={UserSettings} />
         <Stack.Screen options={{ headerShown: false }} name="Rest" component={RestScreen} />
        </Stack.Navigator>
      </NavigationContainer>

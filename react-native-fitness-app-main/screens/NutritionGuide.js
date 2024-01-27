@@ -79,30 +79,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor:'#D1FFBD'
+    backgroundColor:'white'
 
   },
   header: {
     marginTop: 28,
     fontSize: 30,
     fontWeight:'bold',
-    backgroundColor:'#D2FFBD'
+    color:'black'
   },
   buttonContainer: {
-    backgroundColor: '#2ecc71',
+    backgroundColor: 'rgba(0, 0, 0, 0.84)',
     borderRadius: 20,
     padding: 10,
-    height: 40,
+    height: 35,
     width: 95,
     marginTop: 20,
     marginHorizontal: 1,
+    alignItems:'center'
   },
   buttonText: {
     color: 'white',
     textAlign: 'center',
+    alignItems:'center'
   },
   selectedButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#2ecc71',
   },
   selectedDayContainer: {
     marginTop: -20,
@@ -111,11 +113,14 @@ const styles = StyleSheet.create({
   selectedDayText: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginTop:20,
     marginBottom: 10,
+    color:'black' 
   },
   mealContainer: {
     marginVertical: 10,
     alignItems: 'center',
+    color:'white'
   },
   mealImage: {
     width: 200,
@@ -125,7 +130,8 @@ const styles = StyleSheet.create({
   mealTitle: {
     marginTop: 5,
     textAlign: 'center',
-    fontSize:14
+    fontSize:14,
+    color:'black'
   },
   goBackButton:{
     backgroundColor: '#2ecc71',

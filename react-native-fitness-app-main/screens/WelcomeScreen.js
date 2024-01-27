@@ -1,14 +1,21 @@
-import React,{useState}from 'react';
-import { Ionicons } from '@expo/vector-icons';
+import React,{useState,useEffect}from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage'; 
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
 
 const WelcomeScreen = ({navigation}) => {
   const [showIcon, setShowIcon] = useState(false);
 
-
-  const handleNotificationToggle = () => {
-    setShowIcon(!showIcon);
-  };
+// useEffect(() => {    
+//     const resetAsyncStorage = async () => {
+//       try {
+//         await AsyncStorage.clear();
+//         console.log('AsyncStorage cleared successfully.');
+//       } catch (error) {
+//         console.error('Error clearing AsyncStorage:', error);
+//       }
+//     };
+//     resetAsyncStorage();
+//   }, []);
 
   return (
     <ImageBackground
@@ -18,14 +25,6 @@ const WelcomeScreen = ({navigation}) => {
       style={styles.background}
     >
 
-       {/* Notification Icon */}
-       <TouchableOpacity onPress={handleNotificationToggle} style={styles.notificationIcon}>
-          <Ionicons
-            name={showIcon ? 'notifications' : 'notifications-off'}
-            size={20}
-            color="white"
-          />
-        </TouchableOpacity>
       <View style={styles.container}>
         <Text style={styles.title}>Fitness Tracker</Text>
         <Text style={styles.subtitle}>Your personal fitness companion</Text>
@@ -75,11 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  notificationIcon: {
-    position: 'absolute',
-    top: 10,
-    right: 20,
-  },
+ 
 });
 
 export default WelcomeScreen;
