@@ -4,29 +4,34 @@ Fitness Tracker APP
 Installation
 Follow these steps to set up and run the project on your local machine:
 
-Install Expo CLI globally:
-
-Copy code
+1.Install Expo CLI globally:
 npm install -g expo-cli
+
+
+2.npm install react-native
 Install React Native:
 
-java
-Copy code
-npm install react-native
-Install project dependencies:
 
+3.Install project dependencies:
 npm install
-Install yarn (if not already installed):
 
+4.Install yarn (if not already installed):
 npm install -g yarn
-Install Expo dependencies using yarn:
 
+
+5.Install Expo dependencies using yarn:
 yarn add expo
-Install React Native Web dependencies:
 
-Copy code
+
+6.Install React Native Web dependencies:
 npx expo install react-native-web react-dom @expo/metro-runtime
+
+
+
+
+
 Usage
+
 Follow these steps to start the project:
 
 Start the project:
